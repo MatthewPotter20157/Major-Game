@@ -13,7 +13,7 @@ public class playerController : MonoBehaviour
     Vector3 rotationRight = new Vector3(0, 50, 0);
     Vector3 rotationLeft = new Vector3(0, -50, 0);
 
-    Vector3 forward = new Vector3(0, 25, 25);
+    Vector3 forward = new Vector3(0, 0, 1);
     Vector3 backward = new Vector3(0, 0, -1);
 
     void FixedUpdate()
