@@ -15,8 +15,14 @@ public class playerController : MonoBehaviour
 
     Vector3 forward = new Vector3(0, 0, 1);
     Vector3 backward = new Vector3(0, 0, -1);
-
-    void FixedUpdate()
+    void Update()
+    {
+        if(canMove == true)
+        {
+            Move();
+        }
+    }
+    void Move()
     {
         if (Input.GetKey("w"))
         {
