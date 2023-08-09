@@ -17,10 +17,7 @@ public class playerController : MonoBehaviour
     Vector3 backward = new Vector3(0, 0, -1);
     void Update()
     {
-        if(canMove == true)
-        {
-            Move();
-        }
+        Move();
     }
     void Move()
     {
