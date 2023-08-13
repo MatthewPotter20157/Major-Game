@@ -7,6 +7,7 @@ public class playerController : MonoBehaviour
 {
     public Rigidbody rb;
     public Transform car;
+    public UnityEngine.AI.NavMeshAgent player;
     public float speed = 37;
 
 
@@ -24,32 +25,21 @@ public class playerController : MonoBehaviour
         if (Input.GetKey("w"))
         {
             transform.Translate(forward * speed * Time.deltaTime);
-            if (Input.GetKey("d"))
-            {
-                Quaternion deltaRotationRight = Quaternion.Euler(rotationRight * Time.deltaTime);
-                rb.MoveRotation(rb.rotation * deltaRotationRight);
-            }
-
-            if (Input.GetKey("a"))
-            {
-                Quaternion deltaRotationLeft = Quaternion.Euler(rotationLeft * Time.deltaTime);
-                rb.MoveRotation(rb.rotation * deltaRotationLeft);
-            }
         }
         if (Input.GetKey("s"))
         {
             transform.Translate(backward * speed * Time.deltaTime);
-            if (Input.GetKey("d"))
-            {
-                Quaternion deltaRotationRight = Quaternion.Euler(rotationRight * Time.deltaTime);
-                rb.MoveRotation(rb.rotation * deltaRotationRight);
-            }
+        }
+        if (Input.GetKey("d"))
+        {
+            Quaternion deltaRotationRight = Quaternion.Euler(rotationRight * Time.deltaTime);
+            rb.MoveRotation(rb.rotation * deltaRotationRight);
+        }
 
-            if (Input.GetKey("a"))
-            {
-                Quaternion deltaRotationLeft = Quaternion.Euler(rotationLeft * Time.deltaTime);
-                rb.MoveRotation(rb.rotation * deltaRotationLeft);
-            }
+        if (Input.GetKey("a"))
+        {
+            Quaternion deltaRotationLeft = Quaternion.Euler(rotationLeft * Time.deltaTime);
+            rb.MoveRotation(rb.rotation * deltaRotationLeft);
         }
 
 
