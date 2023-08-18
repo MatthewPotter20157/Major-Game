@@ -26,30 +26,20 @@ public class playerController : MonoBehaviour
         if (Input.GetKey("w"))
         {
             transform.Translate(forward * speed * Time.deltaTime, Space.World);
-            if (Input.GetKey("d"))
-            {
-                
-                transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
-            }
-
-            if (Input.GetKey("a"))
-            {
-                transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
-            }
         }
         if (Input.GetKey("s"))
         {
             transform.Translate(backward * speed * Time.deltaTime);
-            if (Input.GetKey("d"))
-            {
+        }
+        if (Input.GetKey("d"))
+        {
 
-                transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
-            }
+            transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
+        }
 
-            if (Input.GetKey("a"))
-            {
-                transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
-            }
+        if (Input.GetKey("a"))
+        {
+            transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
         }
 
     }
