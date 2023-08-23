@@ -23,20 +23,23 @@ public class playerController : MonoBehaviour
 
     void Move()
     {
+        //move forward
         if (Input.GetKey("w"))
         {
             transform.Translate(forward * speed * Time.deltaTime, Space.World);
         }
+        //move backwards
         if (Input.GetKey("s"))
         {
             transform.Translate(backward * speed * Time.deltaTime);
         }
+        //move right
         if (Input.GetKey("d"))
         {
 
             transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
         }
-
+        //move left
         if (Input.GetKey("a"))
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
